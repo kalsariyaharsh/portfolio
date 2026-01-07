@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Harsh Kalsariya — Python Developer</title>
+  <meta name="description" content="Portfolio of a Python developer specializing in web apps, automation, and data projects." />
+  <style>
+    /* ----- Base / Variables ----- */
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#6ee7b7;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      --max-w:1100px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#071024);color:#e6eef6}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:var(--max-w);margin:32px auto;padding:24px}
+
+    /* ----- Header ----- */
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,#0ea5a5,#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{padding:8px 12px;border-radius:10px;font-weight:600}
+    nav a:hover{background:var(--glass)}
+    .cta{background:linear-gradient(90deg,#12b886,#38bdf8);padding:8px 14px;border-radius:12px;color:#012120;font-weight:700}
+
+    /* ----- Hero ----- */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-top:28px}
+    .intro h1{font-size:34px;margin:0 0 8px}
+    .intro p{color:var(--muted);margin:0 0 18px;line-height:1.5}
+    .skills-badges{display:flex;flex-wrap:wrap;gap:8px}
+    .badge{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-weight:700}
+
+    /* ----- Card ----- */
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+
+    /* ----- Projects ----- */
+    section.projects{margin-top:28px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .project{display:flex;flex-direction:column;gap:10px;padding:14px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)}
+    .project h3{margin:0}
+    .project p{color:var(--muted);margin:0}
+    .tech{display:flex;gap:8px;flex-wrap:wrap}
+    .pill{padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.03);font-size:13px}
+    .project-footer{display:flex;justify-content:space-between;align-items:center}
+
+    /* ----- Skills ----- */
+    .skills{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+    .skill{display:flex;flex-direction:column;gap:8px}
+    .bar{height:10px;background:rgba(255,255,255,0.04);border-radius:999px;overflow:hidden}
+    .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#60a5fa)}
+
+    /* ----- Contact ----- */
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+    input,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit}
+    button{padding:10px 14px;border-radius:10px;border:none;cursor:pointer}
+
+    /* ----- Footer ----- */
+    footer{margin-top:28px;color:var(--muted);font-size:14px;text-align:center}
+
+    /* ----- Responsive ----- */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:1fr}
+      .skills{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+    }
+
+    /* ----- Utilities ----- */
+    .muted{color:var(--muted)}
+    .right{margin-left:auto}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">HP</div>
+        <div>
+          <div style="font-weight:800">Harsh Kalsariya</div>
+          <div class="muted" style="font-size:13px">Python Developer • Web Developer</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#contact">Hire me</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="intro">
+          <div class="card">
+            <h1>Hi — I'm Harsh.I develop websites and admin panels using Python & Django. </h1>
+            <p>I convert ideas into working software. Focus on clean code, maintainable architecture and shipping fast. Experience with Django, MySql and ML basics skills.</p>
+            <div class="skills-badges">
+              <span class="badge">Python</span>
+              <span class="badge">Django</span>
+              <span class="badge">HTML 5</span>
+               <span class="badge">CSS</span>
+                <span class="badge">JS</span>
+              <span class="badge">C / C++ </span>
+              <span class="badge">MySQL </span>
+              <!-- <span class="badge"></span> -->
+            </div>
+            <div style="margin-top:14px;display:flex;gap:8px">
+              <a class="cta" href="#projects">See projects</a>
+              <a href="#contact" style="padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.03);font-weight:700">Let's talk</a>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h4 style="margin:0 0 6px">Profile</h4>
+            <p class="muted" style="margin:0 0 8px"> Python developer — available for freelancing & full-time roles.</p>
+            <dl style="display:grid;gap:8px">
+              <div><strong>Location:</strong> Ahemdabad</div>
+              <div><strong>Email:</strong> <a href="mailto:your.email@example.com">Kalsariyaharsh631@gmail.com</a></div>
+              <div><strong>Resume:</strong> <a href="index.html" download>Click</a></div>
+            </dl>
+            <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:12px 0">
+            <div><strong>Quick stats</strong></div>
+            <div style="display:flex;gap:12px;margin-top:8px">
+              <div><div style="font-weight:800">6+</div><div class="muted" style="font-size:13px">months exp</div></div>
+              <div><div style="font-weight:800">12</div><div class="muted" style="font-size:13px">projects</div></div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="projects" class="projects">
+        <h2 style="margin:8px 0"> projects</h2>
+        <div class="grid">
+          <article class="project card">
+            <h3>1) Airline  (Python + Django)</h3>
+            <p class="muted"> Airline — All services related airline 
+            like ticket reservations,   cab services,  food services etc....</p>
+            <div class="tech">
+              <span class="pill">Django</span>
+              <span class="pill">Python</span>
+              <!-- <span class="pill">Postgres</span>
+              <span class="pill">Docker</span> -->
+            </div>
+            <div class="project-footer">
+              <div class="muted">Role : Full-Stack</div>
+              <!-- <div><a href="#">View code</a></div> -->
+            </div>
+          </article>
+
+          <article class="project card">
+            <h3>2)Gym  (Python + Django) </h3>
+            <p class="muted">.</p>
+            <div class="tech"><span class="pill">Python</span><span class="pill">Django</span></div>
+            <div class="project-footer"><div class="muted">Role: Back-end</div>
+            <!-- <div><a href="#">Read case study</a></div></div> -->
+          </article>
+
+          <article class="project card">
+            <h3>3) Analytics Dashboard</h3>
+            <p class="muted">FastAPI backend powering a simple analytics dashboard, CSV imports, caching and background jobs.</p>
+            <div class="tech"><span class="pill">Python</span><span class="pill">Django</span>
+              <!-- <span class="pill">Charting</span> -->
+            </div>
+            <div class="project-footer"><div class="muted">Role: Full-stack</div>
+            <!-- <div><a href="#">Demo</a></div> -->
+          </div>
+          </article>
+
+          <article class="project card">
+            <h3>4) Mini ML: Sentiment Classifier</h3>
+            <p class="muted">Prototype sentiment classifier using scikit-learn; model served as an API endpoint.</p>
+            <div class="tech"><span class="pill">scikit-learn</span><span class="pill">pandas</span></div>
+            <div class="project-footer"><div class="muted">Role: ML Engineer</div><div>
+              <!-- <a href="#">Notebook</a></div> -->
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2 style="margin:18px 0 8px">Skills</h2>
+        <div class="skills card">
+          <div class="skill">
+            <div style="display:flex;justify-content:space-between"><strong>Python</strong><span class="muted">Expert</span></div>
+            <div class="bar"><i style="width:92%"></i></div>
+          </div>
+          <div class="skill">
+            <div style="display:flex;justify-content:space-between"><strong>Django </strong><span class="muted">Advanced</span></div>
+            <div class="bar"><i style="width:86%"></i></div>
+          </div>
+          <div class="skill">
+            <div style="display:flex;justify-content:space-between"><strong>C / C++</strong><span class="muted">Expert</span></div>
+            <div class="bar"><i style="width:80%"></i></div>
+          </div>
+          <div class="skill">
+            <div style="display:flex;justify-content:space-between"><strong>Web D (HTML 5 , CSS, JS,Bootstrap)</strong><span class="muted">Expert</span></div>
+            <div class="bar"><i style="width:95%"></i></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:20px">
+        <h2>Contact</h2>
+        <div class="card contact-grid">
+          <div>
+            <p class="muted">Want to work together? Fill the form or email me directly.</p>
+            <form id="contactForm">
+              <label for="name">Name</label>
+              <input id="name" name="name" placeholder="Your name" required />
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@domain.com" required />
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Short message" required></textarea>
+              <div style="display:flex;gap:8px;margin-top:8px">
+                <button type="submit" style="background:linear-gradient(90deg,#06b6d4,#7c3aed);color:#001">Send</button>
+                <button type="button" id="copyEmail" style="background:transparent;border:1px solid rgba(255,255,255,0.05)">Copy email</button>
+              </div>
+            </form>
+          </div>
+          <div>
+            <div class="card">
+              <h4 style="margin:0 0 6px">Get in touch</h4>
+              <p class="muted">Email: <a href="mailto:your.email@example.com">kalsariyaharsh631@gmail.com</a></p>
+              <p class="muted">LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
+              <p class="muted">GitHub: <a href="#">github.com/yourusername</a></p>
+              <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:12px 0">
+              <div class="muted">Open to freelance & full-time roles. Available to start: Immediately</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        © <span id="year"></span> Harsh Prajapati — Built with ❤️ • <span class="muted">Designed for clarity & speed</span>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // small scripts: current year, form handling, copy email
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('copyEmail').addEventListener('click', function(){
+      navigator.clipboard && navigator.clipboard.writeText('your.email@example.com')
+        .then(()=> alert('Email copied to clipboard'))
+        .catch(()=> alert('Please copy manually: your.email@example.com'))
+    })
+
+    document.getElementById('contactForm').addEventListener('submit', function(ev){
+      ev.preventDefault();
+      // basic client-side validation & simulation
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name||!email||!message){ alert('Please fill all fields'); return }
+      alert('Thanks '+name+" — I've received your message (demo). Replace this alert with real form handling.");
+      this.reset();
+    })
+
+    // smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){e.preventDefault(); target.scrollIntoView({behavior:'smooth',block:'start'});}        
+      })
+    })
+  </script>
+</body>
+</html>

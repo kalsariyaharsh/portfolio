@@ -1,0 +1,121 @@
+/* styles.css — simple responsive resume layout */
+:root{
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #0f62fe;
+  --shadow: 0 6px 18px rgba(17,24,39,0.08);
+  --radius: 12px;
+  --max-width: 1000px;
+  --gap: 20px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #0f172a;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg, var(--bg), #eef2ff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{
+  width:100%;
+  max-width:var(--max-width);
+  display:grid;
+  grid-template-columns: 300px 1fr;
+  gap:var(--gap);
+  align-items:start;
+}
+
+/* Sidebar */
+.sidebar{
+  position:relative;
+}
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:var(--shadow);
+  margin-bottom:var(--gap);
+}
+
+.profile{
+  text-align:center;
+  padding:18px 12px;
+}
+
+.avatar{
+  width:86px;
+  height:86px;
+  margin:0 auto 10px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:26px;
+  background:linear-gradient(135deg,#e0e7ff,#c7d2fe);
+  color:#0f172a;
+}
+
+.name{margin:6px 0 0;font-size:20px}
+.location{margin:4px 0 0;font-size:13px;color:var(--muted)}
+
+.contact ul,
+.trainings ul,
+.skills ul{list-style:none;padding:0;margin:0}
+.contact li, .trainings li{margin-bottom:8px;font-size:14px;color:var(--muted)}
+.contact a{color:var(--accent); text-decoration:none}
+
+.skill-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.skill-list li{
+  background:#f3f4f6;
+  padding:6px 8px;
+  border-radius:8px;
+  font-size:13px;
+  color:#111827;
+}
+
+/* Main content */
+.main{min-height:200px}
+
+.section-title{
+  font-size:14px;
+  margin:0 0 10px;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  color:var(--muted);
+}
+
+/* Education / Projects / Summary styles */
+.summary p, .education p, .projects p{margin:0;color:var(--muted)}
+.edu-item h3, .project-item h3{margin:0 0 6px;font-size:16px}
+.edu-meta{font-size:13px;color:var(--muted);margin-top:6px}
+
+/* Footer */
+.page-footer{
+  margin-top:18px;
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
+  width:100%;
+}
+
+/* Responsive */
+@media (max-width: 880px){
+  .container{grid-template-columns:1fr; padding:0 12px}
+  .sidebar{order:2}
+  .main{order:1}
+}
